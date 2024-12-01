@@ -1,3 +1,3 @@
 export const config = {
-  name: "StarterNext",
+  name: "TopBricoNext",
 };
