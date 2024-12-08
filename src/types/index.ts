@@ -144,3 +144,5 @@ export interface IUseDevice {
   isTablet: boolean;
   isDesktop: boolean;
 }
+
+export * from "./home";

@@ -21,7 +21,9 @@
     "paths": {
       "@/ui": ["./src/components/ui/index.ts"],
       "@/theme": ["./src/components/theme/index.ts"],
+      "@/hooks": ["./src/hooks/index.ts"],
       "@/layout": ["./src/components/layout/index.ts"],
+      "@/widgets": ["./src/components/widgets/index.ts"],
       "@/types": ["./src/types/index.ts"],
       "@/lib/*": ["./src/lib/*"]
     }

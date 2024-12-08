@@ -14,3 +14,5 @@ export * from "./radio-group";
 export * from "./table";
 export * from "./link";
 export * from "./drawer";
+export * from "./slider";
+export * from "./rating";

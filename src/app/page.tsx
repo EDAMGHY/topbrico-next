@@ -1,7 +1,19 @@
+import {
+  HeroSection,
+  ContactUsSection,
+  FeaturedArtisans,
+  ServicesSection,
+  TestimonialsSection,
+} from "@/widgets";
+
 export default function Home() {
   return (
-    <main className="w-full flex justify-center items-center h-page">
-      <h1 className="text-5xl font-bold">Home page here</h1>
+    <main className="container space-y-5 md:space-y-10 mb-5 md:mb-10">
+      <HeroSection />
+      <ServicesSection />
+      <FeaturedArtisans />
+      <TestimonialsSection />
+      <ContactUsSection />
     </main>
   );
 }

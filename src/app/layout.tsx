@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/theme";
 import { ReactNode } from "react";
-import { Footer, Navbar } from "@/layout";
+import { BackgroundSnippet, Footer, Navbar } from "@/layout";
 import { config } from "@/lib/project.config";
 
 import "./globals.css";
@@ -30,6 +30,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <BackgroundSnippet />
           <Footer />
         </ThemeProvider>
       </body>
