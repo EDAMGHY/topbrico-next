@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/theme";
 import { ReactNode } from "react";
-import { BackgroundSnippet, Footer, Navbar } from "@/layout";
 import { config } from "@/lib/project.config";
+import { Toaster, ToasterCN } from "@/ui";
 
 import "./globals.css";
 
@@ -28,10 +28,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          <Toaster />
+          <ToasterCN />
           {children}
-          <BackgroundSnippet />
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

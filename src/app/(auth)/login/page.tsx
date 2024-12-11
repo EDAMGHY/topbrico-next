@@ -1,3 +1,5 @@
+import { LoginPage } from "@/widgets";
+
 export default function Login() {
-  return <div>Login</div>;
+  return <LoginPage />;
 }

@@ -1,5 +1,5 @@
-import React from "react";
+import { RegisterPage } from "@/widgets";
 
 export default function Register() {
-  return <div>Register</div>;
+  return <RegisterPage />;
 }
