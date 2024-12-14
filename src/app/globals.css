@@ -93,4 +93,9 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .thumbnail .keen-slider__slide.active {
+    border: 2px dashed orange;
+    border-radius: 4px;
+  }
 }

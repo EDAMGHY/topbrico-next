@@ -1,4 +1,8 @@
-import { KeenSliderHooks, KeenSliderInstance } from "keen-slider/react";
+import {
+  KeenSliderHooks,
+  KeenSliderInstance,
+  KeenSliderPlugin,
+} from "keen-slider/react";
 import {
   ButtonHTMLAttributes,
   HTMLAttributes,
@@ -18,6 +22,7 @@ export interface ISlider {
   onCurrentSlideChange?: (currentSlide: number) => void;
   arrowIconNext?: ReactNode;
   arrowIconPrev?: ReactNode;
+  sliderPlugins?: KeenSliderPlugin[];
 }
 
 export interface SliderArrowsProps

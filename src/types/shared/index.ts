@@ -25,3 +25,15 @@ export type SharedFormProps<T extends FieldValues> = {
     };
   };
 };
+
+export type IId = string | number;
+
+export interface IBanner {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+export interface INotFoundBlock {
+  message?: string;
+}

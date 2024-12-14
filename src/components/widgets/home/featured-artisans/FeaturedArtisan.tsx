@@ -1,6 +1,6 @@
 import { IFeaturedArtisan, IKeenSliderOptions } from "@/types";
 import Image from "next/image";
-import { Slider, SliderItem } from "@/ui";
+import { KeenSlider, SliderItem } from "@/ui";
 
 export const FeaturedArtisan = ({
   images = [],
@@ -26,7 +26,7 @@ export const FeaturedArtisan = ({
 
   return (
     <div className="space-y-2">
-      <Slider sliderSettings={sliderSettings}>
+      <KeenSlider sliderSettings={sliderSettings}>
         {images.map((image, idx) => (
           <SliderItem key={idx}>
             <div className="relative aspect-square shrink-0 size-full">
@@ -34,7 +34,7 @@ export const FeaturedArtisan = ({
             </div>
           </SliderItem>
         ))}
-      </Slider>
+      </KeenSlider>
 
       <div className="space-y-2">
         <h3 className="text-xl font-bold">{name}</h3>

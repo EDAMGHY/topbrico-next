@@ -13,7 +13,7 @@ import "keen-slider/keen-slider.min.css";
 import { cn } from "@/lib/utils";
 import { ISlider } from "./types";
 
-export const Slider = ({
+export const KeenSlider = ({
   sliderSettings,
   children,
   className = "",
@@ -25,7 +25,6 @@ export const Slider = ({
 }: ISlider) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  //   const isRTLDirection = useRTLDirection();
 
   //   let defaultSliderPlugins = defaultSliderPluginFun(sliderPlugins);
 
@@ -78,10 +77,7 @@ export const Slider = ({
     hideArrowDesktop: sliderSettings?.arrows?.hideArrowDesktop || false,
   };
 
-  const [sliderRef, instanceRef] = useKeenSlider(
-    defaultSliderSettings
-    // defaultSliderPlugins
-  );
+  const [sliderRef, instanceRef] = useKeenSlider(defaultSliderSettings, []);
 
   useEffect(() => {
     if (typeof onCurrentSlideChange === "function") {

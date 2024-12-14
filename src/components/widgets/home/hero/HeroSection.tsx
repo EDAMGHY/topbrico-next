@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/ui";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -29,9 +30,12 @@ export const HeroSection = () => {
               placeholder="Search for artisans by skill, name, or location..."
               className="h-[40px] w-full border-b border-zinc-800 bg-transparent text-white px-2 focus:outline-none placeholder:text-sm placeholder:text-gray-500 focus:border-orange-400"
             />{" "}
-            <button className="bg-white hover:bg-orange-400 ease-in-out duration-500 size-[40px] border-2 border-white hover:border-orange-400 inline-flex justify-center items-center text-black hover:text-white transition-all shrink-0 rounded-full">
+            <Link
+              href={"/artisans"}
+              className="bg-white hover:bg-orange-400 ease-in-out duration-500 size-[40px] border-2 border-white hover:border-orange-400 inline-flex justify-center items-center text-black inline-flex hover:text-white transition-all shrink-0 rounded-full"
+            >
               <Search size={20} />
-            </button>
+            </Link>
           </div>
           <div className="flex justify-center items-center gap-4 md:flex-row flex-col">
             <div className="w-full space-y-2">
