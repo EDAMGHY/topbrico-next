@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import { generateRandomDimensions } from "./utils";
+import { IArtisan } from "@/types";
 
 export const mainMenu = [
   {
@@ -331,14 +332,16 @@ export const filters = [
   },
 ];
 
-export const artisans = [
+export const artisans: IArtisan[] = [
   {
     id: 1,
     fullName: "John Doe",
     picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempore accusamus provident sint, fugiat soluta. Hic ullam excepturi corporis harum!",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis gravida odio a urna cursus, non laoreet libero tristique. Sed eu blandit lacus. Nullam eros risus, porta id lorem eget, porttitor cursus mauris. Mauris scelerisque, dui aliquam tristique molestie, urna elit eleifend lectus, nec mollis nulla orci et ex. Ut eu tellus vitae ipsum interdum hendrerit. Sed dictum laoreet dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum fringilla vestibulum. Nulla metus ligula, efficitur a ullamcorper eu, convallis quis eros. Sed volutpat porttitor purus, eget mattis tortor porttitor vel. Nam sed lacus rhoncus, sodales eros ut, dictum turpis. Nunc vulputate massa vitae velit vehicula, vitae lobortis neque pharetra. Etiam enim erat, congue ac lorem quis, fringilla lobortis tellus. Etiam sed libero quis quam suscipit dictum. Duis eu porttitor purus, nec dapibus urna!",
     location: "Casablanca, Morocco",
     availability: true,
+    rating: 4.5,
+    yearsOfExperience: 20,
     profession: "Carpenter",
     contact: {
       email: "johndoe@gmail.com",
@@ -382,15 +385,51 @@ export const artisans = [
         url: `https://picsum.photos/${generateRandomDimensions(1005, 2001)}`,
       },
     ],
+    reviews: [
+      {
+        id: 1,
+        fullName: "Jane Doe",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 4.5,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 2,
+        fullName: "Sam Wilson",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.2,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 3,
+        fullName: "Lara Croft",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 2.7,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 4,
+        fullName: "Eren Yeager",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.5,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+    ],
   },
   {
     id: 2,
     fullName: "Sarah Smith",
     picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
-    bio: "Sarah is an experienced tailor who creates bespoke clothing tailored to perfection. Her attention to detail is unmatched.",
+    bio: "Duis dapibus at elit vitae pulvinar. Nullam at mi in libero ultricies volutpat. Donec faucibus erat sit amet nulla dapibus accumsan. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nisi augue, mollis in lorem mattis, pharetra laoreet velit. Mauris pharetra dui placerat, tempor lectus ac, fermentum tortor. Donec sit amet ultricies diam. Sed viverra, sapien vitae pulvinar vulputate, erat erat cursus est, quis pulvinar nisl tortor porttitor felis. Sed id est nec justo ullamcorper feugiat sit amet ac massa. Nunc ullamcorper pretium erat, non dignissim lectus venenatis quis. Suspendisse arcu tellus, finibus sit amet fringilla eu, dignissim ut enim. Curabitur eu ipsum vel metus efficitur mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu semper augue, sed auctor metus. Curabitur lacinia sit amet velit non imperdiet",
     location: "Rabat, Morocco",
     availability: false,
     profession: "Tailor",
+    rating: 3.8,
+    yearsOfExperience: 15,
     contact: {
       email: "sarahsmith@gmail.com",
       phone: "+9876543210",
@@ -409,15 +448,43 @@ export const artisans = [
         url: `https://picsum.photos/${generateRandomDimensions(40, 200)}`,
       },
     ],
+    reviews: [
+      {
+        id: 1,
+        fullName: "Jane Doe",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 4.5,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 2,
+        fullName: "Sam Wilson",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.2,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 3,
+        fullName: "Lara Croft",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 2.7,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+    ],
   },
   {
     id: 3,
     fullName: "Ahmed Benali",
     picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
-    bio: "Ahmed is a skilled painter known for his vibrant murals and detailed artwork.",
+    bio: "Pellentesque aliquam tristique urna at venenatis. Curabitur eu viverra tellus. Maecenas eu diam faucibus, eleifend purus non, vestibulum tellus. Praesent hendrerit enim sed tellus ornare lobortis. Duis sodales mollis felis dapibus condimentum. Mauris vitae accumsan dui, eu euismod leo. Quisque facilisis dolor ac neque mattis, nec vulputate elit congue. Maecenas eget ultrices nisl. Nullam ac velit maximus, rutrum lorem a, facilisis enim. Integer blandit leo ac neque malesuada, eu cursus turpis pellentesque",
     location: "Marrakech, Morocco",
     availability: true,
     profession: "Painter",
+    rating: 2.2,
+    yearsOfExperience: 12,
     contact: {
       email: "ahmedbenali@gmail.com",
       phone: "+212654987321",
@@ -436,14 +503,34 @@ export const artisans = [
         url: `https://picsum.photos/${generateRandomDimensions(40, 200)}`,
       },
     ],
+    reviews: [
+      {
+        id: 1,
+        fullName: "Jane Doe",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 4.5,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 2,
+        fullName: "Sam Wilson",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.2,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+    ],
   },
   {
     id: 4,
     fullName: "Fatima Lahlou",
     picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
-    bio: "Fatima specializes in handcrafted pottery, blending traditional techniques with modern designs.",
+    bio: "Nam nec consequat urna, interdum hendrerit felis. Morbi ligula diam, varius in neque eu, dapibus accumsan orci. Fusce sapien ligula, venenatis venenatis pulvinar a, tempus sed quam. Nunc a odio sodales, bibendum nibh vitae, tristique libero. Sed pulvinar tincidunt imperdiet. Praesent ultricies tempus suscipit. Praesent suscipit tellus vel lacus rhoncus, vitae convallis orci posuere. Mauris tincidunt ac dui vel fringilla. Curabitur rutrum arcu ante, sit amet tempor augue aliquam nec. Ut justo turpis, placerat ac diam consectetur, faucibus eleifend urna. Nulla suscipit laoreet velit a accumsan. Curabitur gravida et ligula non ultricies.",
     location: "Fes, Morocco",
     availability: true,
+    rating: 1.7,
+    yearsOfExperience: 8,
     profession: "Potter",
     contact: {
       email: "fatimalahlou@gmail.com",
@@ -463,14 +550,58 @@ export const artisans = [
         url: `https://picsum.photos/${generateRandomDimensions(40, 200)}`,
       },
     ],
+    reviews: [
+      {
+        id: 1,
+        fullName: "Jane Doe",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 4.5,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 2,
+        fullName: "Sam Wilson",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.2,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 3,
+        fullName: "Lara Croft",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 2.7,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 4,
+        fullName: "Eren Yeager",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.5,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+      {
+        id: 5,
+        fullName: "Eren Yeager",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 1.2,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
+      },
+    ],
   },
   {
     id: 5,
     fullName: "Youssef El Khattabi",
     picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
-    bio: "Youssef is an expert blacksmith with a passion for creating custom metalworks.",
+    bio: "Nulla ac orci vitae lacus posuere placerat. Sed tincidunt nunc ultricies purus vestibulum, et fringilla tellus vulputate. Curabitur ac interdum velit. Vestibulum nec erat tincidunt diam finibus consequat vel vel ante. Praesent commodo metus est, ac pellentesque erat dapibus nec. Maecenas iaculis, nisl eu pharetra luctus, ante ante tincidunt urna, in aliquam erat purus a nulla. Vivamus sit amet bibendum nibh. Fusce ultrices massa ut nunc auctor, ac iaculis nulla tempus",
     location: "Agadir, Morocco",
     availability: false,
+    rating: 4.9,
+    yearsOfExperience: 4,
     profession: "Blacksmith",
     contact: {
       email: "youssefelkhattabi@gmail.com",
@@ -488,6 +619,16 @@ export const artisans = [
         description:
           "A unique lantern that combines traditional and modern metalworking techniques.",
         url: `https://picsum.photos/${generateRandomDimensions(40, 200)}`,
+      },
+    ],
+    reviews: [
+      {
+        id: 1,
+        fullName: "Jane Doe",
+        picture: `https://picsum.photos/${generateRandomDimensions(30, 200)}`,
+        rating: 3.9,
+        review:
+          "lorem ipsum dolor sit amet consectetur adipisicing elit. Minima illo reiciendis commodi quibusdam dicta excepturi ad eligendi autem tempora neque laboriosam consequatur, sunt enim dignissimos nesciunt amet nulla iusto culpa.",
       },
     ],
   },

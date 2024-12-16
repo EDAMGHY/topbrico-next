@@ -10,10 +10,12 @@ export const ArtisansCard = (props: IArtisan) => {
       <Badge variant={availability ? "default" : "destructive"}>
         {availability ? "Available" : "Unavailable"}
       </Badge>
-      <Avatar>
-        <AvatarImage src={picture} className="object-cover" alt={fullName} />
-        <AvatarFallback>{fullName.slice(0, 2)}</AvatarFallback>
-      </Avatar>
+      {picture && (
+        <Avatar>
+          <AvatarImage src={picture} className="object-cover" alt={fullName} />
+          <AvatarFallback>{fullName.slice(0, 2)}</AvatarFallback>
+        </Avatar>
+      )}
       {fullName && (
         <h2 className="text-xl  text-center font-bold ">{fullName}</h2>
       )}

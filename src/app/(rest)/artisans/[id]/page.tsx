@@ -1,5 +1,5 @@
 import { artisans } from "@/lib/mock-data";
-import { ArtisanDetails, Banner, NotFoundBlock } from "@/widgets";
+import { ArtisanDetails, Banner, NotFoundBlock, ReviewsList } from "@/widgets";
 import { HardHat } from "lucide-react";
 
 const ArtisansDetails = ({ params: { id } }: { params: { id: string } }) => {
@@ -16,7 +16,14 @@ const ArtisansDetails = ({ params: { id } }: { params: { id: string } }) => {
   return (
     <section className="space-y-8 py-8">
       <Banner {...props} />
-      {artisan ? <ArtisanDetails {...artisan} /> : <NotFoundBlock />}
+      {artisan ? (
+        <>
+          <ArtisanDetails {...artisan} />
+          <ReviewsList reviews={artisan.reviews} />
+        </>
+      ) : (
+        <NotFoundBlock />
+      )}
     </section>
   );
 };
