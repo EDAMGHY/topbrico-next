@@ -55,6 +55,16 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
       screens: {
         xxs: "320px",
@@ -64,16 +74,37 @@ const config = {
         lg: "1024px",
         xl: "1280px",
         "2xl": "1400px",
-        onlyMobile: { max: "640px" },
-        onlyTablet: { min: "641px", max: "1024px" },
-        onlyDesktop: { min: "1025px" },
-        upToTablet: { max: "1024px" },
-        lgDown: { max: "1023px" },
-        xlDown: { max: "1279px" },
-        mdDown: { max: "767px" },
-        smDown: { max: "549px" },
-        xsDown: { max: "399px" },
-        xxsDown: { max: "319px" },
+        onlyMobile: {
+          max: "640px",
+        },
+        onlyTablet: {
+          min: "641px",
+          max: "1024px",
+        },
+        onlyDesktop: {
+          min: "1025px",
+        },
+        upToTablet: {
+          max: "1024px",
+        },
+        lgDown: {
+          max: "1023px",
+        },
+        xlDown: {
+          max: "1279px",
+        },
+        mdDown: {
+          max: "767px",
+        },
+        smDown: {
+          max: "549px",
+        },
+        xsDown: {
+          max: "399px",
+        },
+        xxsDown: {
+          max: "319px",
+        },
       },
       height: {
         page: "calc(100vh - 65px)",
@@ -114,12 +145,20 @@ const config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {

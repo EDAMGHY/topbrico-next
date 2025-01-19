@@ -23,3 +23,13 @@ export const generateRandomDimensions = (
 ) => {
   return `${generateRandomNumber(min, max)}/${generateRandomNumber(min, max)}`;
 };
+
+export const formatDate = (date: Date) => {
+  const today = Intl.DateTimeFormat("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(date);
+  return today;
+};
